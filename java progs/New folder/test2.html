@@ -1,0 +1,54 @@
+<html>
+<body>
+
+<h2>Prime</h2>
+
+
+
+<input type="text" id="prime" >
+<button type="button" onclick="prime()" >click</button>
+
+<p id="demo"></p>
+
+<script>
+	function prime(){
+		var no=document.getElementById("prime").value;	
+		var arr=1;
+		var count=0;	
+	//document.getElementById("demo").innerHTML = document.getElementById("prime").value;	
+			if(no>100)
+				alert("no cannot be greater than "+no);
+			else
+			{
+				for(i=1;i<=no;i++)
+				{	
+					count=0;
+					if(i==1)
+					{
+						document.getElementById("demo").innerHTML=	document.getElementById("demo").innerHTML+i;
+						continue;
+					}
+					else{
+							for(j=1;j<=i;j++)
+							{
+								var x=i%j;
+								if( x==0)
+								count++;
+
+							}
+
+						}
+					
+
+					if(count==2 )
+					{
+						document.getElementById("demo").innerHTML=	document.getElementById("demo").innerHTML+" ,"+i;
+					}
+				}
+			}
+	}
+
+</script>
+
+</body>
+</html> 

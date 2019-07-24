@@ -1,0 +1,98 @@
+<html>
+<head>
+	<div align="center">
+	<title>Book Your Ticket Online</title>
+	<h1>Book your ticket online</h1>
+	<style>
+	body {
+ 	 background-color: #008080;
+	}
+
+	.button {
+  background-color: #4CAF50;
+  
+  
+}
+
+	</style>
+	</head>
+	<body >
+		<form>
+			<fieldset style="width:500px;Height:600px">
+				<legend ><h2>Ticket Booking</h2></legend>
+		<table>
+				<tr>
+				<td ><h3>Name:</h3></td>
+					<td height="50"><input type="text" required></td>
+				</tr>
+				<br><br>
+
+				<tr>
+					<td><h3> Enter date of Booking:</h3></td>
+					<td><input type="date" min="2019-07-20"></td>
+
+				</tr>
+
+				<tr>
+						<td><h3>Select a movie:</h3></td>
+						<td height="50"><select name="movie">
+  							<option value="Tomb Raider">Tomb raider</option>
+  							<option value="venom">Venom</option>
+ 		 					<option value="avengers">Avengers</option>
+ 	 						<option value="Rush Hour">Rush hour</option></select></td>
+
+				</tr>
+				<br><br>
+				<tr>
+					<td><h3>Show timming:</h3></td>
+					<td height="50"><input type="time" name="usr_time"></td>
+				</tr>
+
+				<tr>
+					<td><h3>Select Class:</h3></td>
+					<td height="50" onclick="">
+						<input type="radio" name="gender" value="200" id="p" onfocus="getamt(id)">Platinum
+								<input type="radio" name="gender" value="400" id="g" onfocus="getamt(id)">Gold
+								<input type="radio" name="gender" value="800" id="e" onfocus="getamt(id)">Execlusive
+				</tr>
+
+				<tr>
+					<td><h3>Price:</h3></td>
+					<td height="50"><input type="number" id="price" value="price"></td>
+				</tr>
+
+				<tr>
+					<td><h3>Enter No of tickets:</h3></td>
+					<td height="50"><input type="number" min="0" max="20" id="no_tkts" value="no_of_tkts"></td>
+				</tr>
+
+
+				<tr>
+					<td><h3>Total Price:</h3></td>
+					<td height="50"><input type="number" id="tot_price" onfocus="calcTotalPrice()"></td>
+				</tr>
+
+
+				<tr>
+					
+					<td ><input type="button" class="button" value="submit" onclick='alert("ur ticket is booked")'></td>
+				</tr>
+		</table>
+	</fieldset>
+	</form>
+</div>
+<script type="text/javascript">
+	function calcTotalPrice(){
+	var price=document.getElementById("price").value;
+	var no_tkts=document.getElementById("no_tkts").value;
+	tot_price.value=price*no_tkts;
+}
+	function getamt(id) {
+		document.getElementById("price").value=document.getElementById(id).value;
+	}
+</script>
+
+
+	</body>
+
+</html>

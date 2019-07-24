@@ -1,0 +1,13 @@
+<html>
+<head>
+
+	<script>
+		var job='[{"fname":"abhishek"},{"lname":"kundu"}]';
+		var x=JSON.parse(job);
+		document.getElementById("demo").innerHTML=x.fname;
+	</script>
+	</head>
+	<body>
+		<p id="demo"></p>
+	</body>
+</html>

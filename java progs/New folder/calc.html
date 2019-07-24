@@ -1,0 +1,50 @@
+<html>
+<head>
+	<h1>MY CAlCULATOR</h1>
+
+
+	<script>
+			
+		function add()
+		{
+			var x=(document.getElementById("val1").value);
+		var y=(document.getElementById("val2").value);
+			document.getElementById("result").value= +x + +y;	
+		}
+
+
+		function sub()
+		{
+			var x=(document.getElementById("val1").value);
+		var y=(document.getElementById("val2").value);
+			document.getElementById("result").value=x-y;	 
+		}
+
+
+		function mul()
+		{
+			var x=(document.getElementById("val1").value);
+		var y=(document.getElementById("val2").value);
+			document.getElementById("result").value=x*y;	
+		}
+
+
+		function div()
+		{var x=(document.getElementById("val1").value);
+		var y=(document.getElementById("val2").value);
+			document.getElementById("result").value=x/y;	
+		}
+	</script>
+	</head>
+
+	<body>
+		enter no 1:<input type="text" id="val1"><br><br>
+		enter no 2:<input type="text" id="val2"><br><br>
+		Answer: <input type="text" id="result"><br><br>
+
+		<input type="button" onclick="add()" value="ADD">
+		<input type="button" onclick="sub()" value="SUB">
+		<input type="button" onclick="mul()" value="MUL">
+		<input type="button" onclick="div()" value="DIV">
+	</body>
+</html>
